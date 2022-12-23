@@ -31,7 +31,7 @@ jobs:
         mkdir -p database
         touch database/database.sqlite
     - name: create migration
-      run : php artisan migrate:fresh --seed
+      run : php artisan migrate --seed
     - name : run server
       run : php artisan serve
     - name: Run npm
