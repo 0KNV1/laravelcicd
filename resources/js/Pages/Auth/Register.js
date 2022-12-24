@@ -106,8 +106,6 @@ export default function Register() {
                         placeholder ="08xxxx"
                         value={data.phone_number}
                         className="block w-full mt-1"
-                        autoComplete="phone_number"
-                        isFocused={true}
                         onChange={onChange}
                         required
                     />
