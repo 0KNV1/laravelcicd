@@ -33,11 +33,11 @@ jobs:
 #         create database 
         
 #     - name: create migration
-#       run : php artisan migrate --seed
-    - name : run server
-      run : php artisan serve
-    - name: Run npm
-      run : npm run hot
+# #       run : php artisan migrate --seed
+#     - name : run server
+#       run : php artisan serve
+#     - name: Run npm
+#       run : npm run hot
 #     - name: Execute tests (Unit and Feature tests) via PHPUnit
 #       env:
 #         DB_CONNECTION: sqlite
