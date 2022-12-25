@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::controller(ProfileController::class)->group(function () {
         
         Route::get('profile/edit', 'edit')->name('profile.edit');
-        Route::put('profile/edit', 'update')->name('profile.update');
+        Route::patch('profile/edit', 'update')->name('profile.update');
     });
     
 });

@@ -17,7 +17,7 @@ export default function Edit({user}) {
     const onSubmit = (e) => {
         e.preventDefault();
         Inertia.post(route("profile.update"), {
-            _method: "PUT",
+            _method: "PATCH",
             ...data,
         });
     };

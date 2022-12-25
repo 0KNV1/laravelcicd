@@ -83,16 +83,16 @@ class ProfileController extends Controller
      * @param  \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UpdateProfileRequest $request, User $user)
     {
-        
+        $request->user()->fill($request->validated());
         $user->update([
             'name' =>  $request->name,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'password' => $request->password,
         ]);
-
+        $request->user()->save();
         return to_route('home', compact('user'));
     }
 
