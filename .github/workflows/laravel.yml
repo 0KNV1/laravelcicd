@@ -29,7 +29,6 @@ jobs:
     - name: edit conf
       run: |
           cd /var/www/html
-          php artisan storage:link
           npm rebuild
           npm run watch
           
